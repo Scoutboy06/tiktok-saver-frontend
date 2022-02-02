@@ -1,0 +1,13 @@
+.card {
+	width: 200px;
+	height: 355px;
+	margin: 3px;
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+}
+
+.card img {
+	width: 100%;
+	height: fit-content;
+}
