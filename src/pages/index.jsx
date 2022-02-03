@@ -4,7 +4,7 @@ import { NavLink, Outlet } from 'react-router-dom';
 import styles from './index.module.css';
 
 const fetchCategories = () =>
-	fetch('/api/categories')
+	fetch(`${process.env.REACT_APP_API_URI}/categories`)
 		.then(res => res.json())
 		.catch(console.error);
 

@@ -110,7 +110,9 @@ export default function Video() {
 					className={styles.button}
 					onClick={() => {
 						if (window.confirm('Are you sure you want to delete this video?')) {
-							fetch('/api/videos/' + params.id, { method: 'DELETE' })
+							fetch(`${process.env.REACT_APP_API_URI}/videos/` + params.id, {
+								method: 'DELETE',
+							})
 								.then(res => {
 									if (!res.ok) {
 										console.error(res);

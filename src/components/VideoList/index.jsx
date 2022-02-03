@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import VideoPreviewCard from '../VideoPreviewCard';
 
 const fetchVideos = categoryName =>
-	fetch(`/api/categories/${categoryName}`)
+	fetch(`${process.env.REACT_APP_API_URI}/categories/${categoryName}`)
 		.then(res => res.json())
 		.catch(console.error);
 
