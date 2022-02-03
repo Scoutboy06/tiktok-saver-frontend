@@ -12,7 +12,9 @@ export default function Video() {
 		(async () => {
 			setVideoMeta(null);
 			console.log(params.id);
-			const raw = await fetch('/api/videos/' + params.id);
+			const raw = await fetch(
+				`${process.env.REACT_APP_API_URI}/videos/` + params.id
+			);
 			const videoMeta = await raw.json();
 
 			const json = JSON.parse(localStorage.getItem('videosInCategory')) || {};
